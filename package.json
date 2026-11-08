@@ -1,0 +1,22 @@
+{
+  "name": "whatsapp-bot-api",
+  "version": "0.5.1",
+  "description": "WhatsApp Bot API v0.5.1 Unified - Anti-Ban, BullMQ, SQLite & Legacy Retro-compatible",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node --dns-result-order=ipv4first src/index.js"
+  },
+  "dependencies": {
+    "whaileys": "latest",
+    "bullmq": "^5.1.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.2",
+    "ioredis": "^5.3.2",
+    "multer": "^1.4.5-lts.1",
+    "pino": "^8.16.1",
+    "pino-pretty": "^10.2.3",
+    "qrcode": "^1.5.3",
+    "qrcode-terminal": "^0.12.0",
+    "sqlite3": "^5.1.6"
+  }
+}

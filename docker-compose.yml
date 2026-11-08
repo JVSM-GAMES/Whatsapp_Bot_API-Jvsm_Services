@@ -1,0 +1,29 @@
+services:
+  redis:
+    image: redis:7-alpine
+    container_name: whatsapp-bot-redis
+    restart: unless-stopped
+    command: redis-server --appendonly yes
+    volumes:
+      - redis_data:/data
+
+  whatsapp-api:
+    build: .
+    container_name: whatsapp-bot-api
+    restart: unless-stopped
+    ports:
+      - "${PORT:-10000}:10000"
+    env_file:
+      - .env
+    dns:
+      - 8.8.8.8
+      - 1.1.1.1
+    sysctls:
+      - net.ipv6.conf.all.disable_ipv6=1
+    volumes:
+      - ./data:/app/data
+    depends_on:
+      - redis
+
+volumes:
+  redis_data:

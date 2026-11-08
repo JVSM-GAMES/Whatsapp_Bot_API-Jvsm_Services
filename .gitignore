@@ -1,0 +1,43 @@
+# Dependências Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# Variáveis de Ambiente e Segredos
+.env
+.env.local
+.env.*
+!.env.example
+
+# Dados Persistentes, Mídias, Sessões Baileys e Banco SQLite
+data/
+auth/
+auth_info/
+auth_info_baileys/
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+settings.json
+
+# Arquivos de Backup e Temporários
+*.old.js
+*.backup.js
+*.docx
+*.zip
+*.tar.gz
+*.log
+tmp/
+temp/
+
+# Sistema Operacional e Editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
